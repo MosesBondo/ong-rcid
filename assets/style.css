@@ -169,34 +169,16 @@ nav
   position: relative;
   background-size: cover;
   background-position: center;
-  animation: sliderBackground 18s infinite;
+  transition: background-image 1s ease-in-out;
   color: white;
+  min-height: 600px; /* tu peux ajuster selon ton besoin */
 }
 
-@keyframes sliderBackground {
-  0% {
-    background-image: url('assets/depistage.jpg');
-  }
-  33% {
-    background-image: url('assets/IMG_20171207_112738.jpg');
-  }
-  66% {
-    background-image: url('assets/IMG_20170805_151043 (2).jpg');
-  }
-  100% {
-    background-image: url('assets/depistage.jpg');
-  }
-}
-
-/* Optionnel : pour rendre le texte plus lisible */
 .bg-slider::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(1, 3, 4, 0.5); /* filtre sombre pour contraste */
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(1, 3, 4, 0.5);
   z-index: 0;
 }
 
@@ -204,5 +186,4 @@ nav
   position: relative;
   z-index: 1;
 }
-
 
