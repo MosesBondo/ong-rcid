@@ -186,4 +186,28 @@ nav
   position: relative;
   z-index: 1;
 }
+.bg-slider {
+  background-size: cover;        /* Fait en sorte que l'image couvre tout l'espace */
+  background-position: center;   /* Centre l'image */
+  background-repeat: no-repeat;  /* Évite que l'image se répète */
+  min-height: 100vh;             /* Pour occuper au moins tout l'écran */
+  transition: background-image 1s ease-in-out; /* Animation douce lors du changement d'image */
+}
+
+.bg-slider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4); /* Filtre sombre */
+  z-index: 1;
+}
+
+.bg-slider > * {
+  position: relative;
+  z-index: 2;
+}
+
 
